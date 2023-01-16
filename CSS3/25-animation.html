@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Animation Property</title>
+    <style>
+        div{
+            background-color: orange;
+            height: 150px;
+            width: 150px;
+            color: white;
+            font-size: 2rem;
+            /* animation: renk-degistir 4s cubic-bezier(0.075, 0.82, 0.165, 1) 1s 2 both alternate, boyut-degistir 4s 1s 2 both alternate; */
+            animation-name: renk-degistir, boyut-degistir;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: .1s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+        }
+        div:hover{
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* animation: renk-degistir 4s cubic-bezier(0.075, 0.82, 0.165, 1) 0s infinite alternate; */
+            /* animation: renk-degistir 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 forwards; */
+            animation-play-state: paused;
+        }
+        @keyframes renk-degistir{
+            from{
+                background-color: red;
+            }
+
+            to{
+                background-color: teal;
+            }
+        }
+        @keyframes boyut-degistir {
+            to{
+                height: 250px;
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>Div</div>
+</body>
+</html>

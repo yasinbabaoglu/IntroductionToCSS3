@@ -1,0 +1,56 @@
+p {
+  background-color: yellow;
+  color: teal;
+}
+
+.item-1 {
+  color: red;
+  background-color: #cccc00;
+}
+
+.item-2 {
+  color: red;
+  background-color: #999900;
+}
+
+.item-3 {
+  color: red;
+  background-color: #666600;
+}
+
+.item-4 {
+  color: red;
+  background-color: #333300;
+}
+
+.list-1 {
+  width: 20px;
+}
+
+.list-2 {
+  width: 40px;
+}
+
+.list-3 {
+  width: 60px;
+}
+
+.list-4 {
+  width: 80px;
+}
+
+.list-5 {
+  width: 100px;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-weight: italic;
+}/*# sourceMappingURL=sass_loops.css.map */

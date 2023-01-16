@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip</title>
+    <style>
+        *, *::before, *::after{
+            box-sizing: border-box;
+        }
+        body{
+            margin-top: 300px;
+            font-size: 2rem;
+        }
+        [data-tooltip]{
+            position: relative;
+            display: inline-block; /*Important! (span is inline element)*/
+        }
+        [data-tooltip]:hover::before, [data-tooltip]:hover::after{
+            --tooltip-color: #3e47e5;
+            --tooltip-size: 0.5rem;
+            position: absolute;
+            left: 50%
+        }
+
+        [data-tooltip]:hover::before{
+            content: attr(data-tooltip);
+            /* bottom: 100%; */
+            /* left: 50%; */
+            transform: translate(-50%, calc(-100% - var(--tooltip-size)));
+            background-color: var(--tooltip-color);
+            border-radius: .3rem;
+            color: #eaeef0;
+            padding: .3rem;
+            width: max-content;
+            max-width: 100%;
+            text-align: center;
+        }
+        [data-tooltip]:hover::after{
+            content: " ";
+            border: var(--tooltip-size) solid transparent;
+            border-top-color: var(--tooltip-color);
+            top: 0px;
+            /* left: 50%; */
+            width: var(--tooltip-size);
+            height: var(--tooltip-size);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <span class="tooltip" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nemo dolore sunt veniam, molestias optio fugiat qui ratione officiis ut!">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae doloremque a ab ex obcaecati, nemo veritatis id reiciendis rem illum quisquam earum, voluptate cumque corrupti quos, ea pariatur tempore porro quaerat iste repudiandae explicabo. Non sed accusantium perferendis! Non nisi inventore doloribus quisquam itaque sunt architecto laborum vitae, consequuntur odit!</span>
+</body>
+</html>

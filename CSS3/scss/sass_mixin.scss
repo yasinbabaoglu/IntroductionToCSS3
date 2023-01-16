@@ -1,0 +1,30 @@
+@mixin menu-button($bg-color, $color, $h-color:red){
+    a{
+        background-color: $bg-color;
+        color: $color;
+        margin: 5px;
+        &:hover{
+            color:$h-color;
+        }
+    }
+}
+
+ul{
+    list-style: none;
+}
+.navbar{
+    @include menu-button(orange,white);
+}
+
+/* content test */
+@mixin test($color){
+    .test{
+        color: $color;
+        @content;
+    }
+}
+@include test(brown){
+    background-color: purple;
+    font-size: 64px;
+    border: 1px solid green;
+}

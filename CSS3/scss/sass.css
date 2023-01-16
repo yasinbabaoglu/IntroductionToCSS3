@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/*css yorum satırı (gözükür)*/
+body {
+  font-family: Helvetica, Arial;
+}
+
+.p1 {
+  font-size: 2rem;
+  color: #f44e4e;
+  border: 2px solid #771111;
+}
+
+.p2 {
+  color: purple;
+}
+
+.main-content .p2 {
+  color: blue;
+}
+
+.p3 {
+  color: orange;
+  background-color: #b71c1c;
+}
+
+a {
+  font-size: 2rem;
+}
+a:hover {
+  color: #e57373;
+}
+
+.p4 {
+  text-align: center;
+  text-transform: uppercase;
+  text-overflow: hidden;
+}/*# sourceMappingURL=sass.css.map */

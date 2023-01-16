@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selcetors Advance</title>
+    <style>
+        body{
+            font-size: 2rem;
+        }
+        span{
+            color: blue;
+        }
+        .h2{
+            background-color: yellow !important;
+        }
+        #h2{
+            background-color: purple;
+        }
+        div > span{
+            color: red;
+        }
+        div ~ p{
+            background-color: blue;
+        }
+        div + p {
+            background-color: green;
+        }
+        p + div {
+            background-color: brown;
+        }
+        h2.h2Sinif{
+            background-color: red;
+        }
+        h2:not(.h2Sinif){
+            background-color: blue;
+        }
+        input:checked{
+            margin: 10px;
+        }
+        input[type="text"]{
+            background-color: red;
+        }
+        input[data-margin*="soo"]{
+            background-color: yellow;
+        }
+        
+    </style>
+</head>
+<body>
+    <input data-margin="jassooon" type="text">
+    <input type="checkbox">
+    <input type="text">
+    <h2 class="h2" id="h2">Başlık H2</h2>
+    <h2 class="h2Sinif">Başlık H2</h2>
+    <h2>Başlık H2</h2>
+    <h2>Başlık H2</h2>
+
+    <!-- <div></div> -->
+    <p>Paragraf 1</p>
+    <p>Paragraf 2</p>
+    <div>
+        <p>Bu etkilenmeyecek</p>
+        <span>
+            Dışardaki span elementi
+            <span>İçerdeki span elementi</span>
+        </span>
+        <p>Bu etkilenmeyecek</p>
+        <span>2. span</span>
+    </div>
+    <p>Paragraf 3</p>
+    <p>Paragraf 4</p>
+    <div>Div 2</div>
+    <div>Div 3</div>
+    <p>Paragraf 5</p>
+</body>
+</html>

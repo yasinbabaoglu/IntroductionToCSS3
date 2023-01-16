@@ -1,0 +1,44 @@
+$large_font: 2rem;
+$main_color: #f44e4e;
+$second_color: orange;
+$border: 2px solid #771111;
+$body-font : Helvetica, Arial;
+$red-map: (light: #e57373, medium: #f44336, dark: #b71c1c);
+//scss yorum satırı
+/*css yorum satırı (gözükür)*/
+body{
+    font-family: $body-font;
+}
+.p1{
+    font-size: $large_font;
+    color: $main_color;
+    border: $border;
+}
+.p2{
+    $second_color: purple;
+    color: $second_color;
+}
+.main{
+    &-content{
+        .p2{
+            color: blue;
+        }
+    }
+}
+.p3{
+    color: $second_color;
+    background-color: map-get($red-map ,dark);
+}
+a{
+    font-size: $large_font;
+    &:hover{
+        color: map-get($red-map , light );
+    }
+}
+.p4{
+    text:{
+        align: center;
+        transform: uppercase;
+        overflow: hidden;
+    }
+}

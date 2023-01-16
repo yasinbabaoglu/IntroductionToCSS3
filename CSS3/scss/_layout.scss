@@ -1,0 +1,24 @@
+body{
+    background-color: $primary-color;
+}
+
+%main{
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+.button-base{
+    @extend %main;
+    border-radius: 2px;
+    margin: 5px;
+}
+
+.menu-button{
+    @extend %main;
+    color: purple;
+}
+
+.submit-button{
+    @extend .button-base;
+    @extend .menu-button;
+    font-size: 1rem;
+}

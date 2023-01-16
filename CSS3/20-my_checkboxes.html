@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *, *::before, *::after{
+            box-sizing: border-box;
+        }
+        .my-checkbox{
+            position: absolute;
+            opacity: 0;
+            left: -100px;
+
+        }
+        .my-checkbox + label{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+        }
+        .my-checkbox + label::before{
+            display: inline-block;
+            content: " ";
+            width: 1.5em;
+            height: 1.5em;
+            margin-right: 0.5em;
+            border-radius: 0.2em;
+            border: 0.05em solid black;
+        }
+        label:hover::before{
+            background-color: #0AF;
+        }
+        .my-checkbox:checked:not(:disabled) + label::before{
+            box-shadow: 0 0 20px 0 #0AF;
+        }
+        .my-checkbox:checked + label::before{
+            content: '\2713';
+            display: flex;
+            justify-content: center;
+            color: white;
+            background-color: #069;
+        }
+        .my-checkbox:disabled + label::before{
+            background-color: #ccc;
+            border-color: #999;
+        }
+        .my-checkbox:disabled + label{
+            color: #aaa;
+            cursor: not-allowed;
+        }
+
+    </style>
+</head>
+<body>
+    <input class="my-checkbox" type="checkbox" disabled checked id="cb1">
+    <label for="cb1">Checkbox 1</label>
+    <br>
+    <input class="my-checkbox" type="checkbox" disabled id="cb2">
+    <label for="cb2">Checkbox 2</label>
+    <br>
+    <input class="my-checkbox" type="checkbox" id="cb3">
+    <label for="cb3">Checkbox 3</label>
+    <br>
+    <input class="my-checkbox" type="checkbox" id="cb4">
+    <label for="cb4">Checkbox 4</label>
+    <br>
+</body>
+</html>

@@ -1,0 +1,20 @@
+ul {
+  list-style: none;
+}
+
+.navbar a {
+  background-color: orange;
+  color: white;
+  margin: 5px;
+}
+.navbar a:hover {
+  color: red;
+}
+
+/* content test */
+.test {
+  color: brown;
+  background-color: purple;
+  font-size: 64px;
+  border: 1px solid green;
+}/*# sourceMappingURL=sass_mixin.css.map */

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements</title>
+    <style>
+        p::first-letter{
+            font-size: 6rem;
+        }
+        p::first-line{
+            background-color: red;
+        }
+        p::selection{
+            background-color: aqua;
+            color: brown;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .box::before{
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: yellow;
+            content: "";
+        }
+        .box::after{
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: blue;
+            content: "";
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        asdwq
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vitae impedit porro! Deleniti eaque eveniet magnam, incidunt animi sint culpa, iure, vero blanditiis ea reiciendis odio velit perspiciatis? Eligendi culpa commodi, iure quia, atque ullam quam laborum nesciunt dolorum nisi exercitationem blanditiis. Officiis modi voluptas porro id! Doloremque, aliquam enim.</p>
+</body>
+</html>
